@@ -30,3 +30,9 @@ smooth bug-free navigation, adequate seed data and sufficient CSS styling:
 [sample-state]: docs/sample-state.md
 [api-endpoints]: docs/api-endpoints.md
 [schema]: docs/schema.md
+
+## Implementation Timeline
+
+### Phase 1: Backend setup and Front End User Authentication (2 Days)
+
+**Objective:** Functioning rails project with front-end Authentication
