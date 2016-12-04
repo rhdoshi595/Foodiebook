@@ -1,6 +1,8 @@
 # FoodieBook
 
-[Heroku Link]["https://foodiebook.herokuapp.com"]
+[Heroku Link][heroku]
+
+[heroku]: https://foodiebook.herokuapp.com
 
 ## Minimum Viable Product
 
