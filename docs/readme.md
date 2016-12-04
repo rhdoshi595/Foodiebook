@@ -17,3 +17,16 @@ smooth bug-free navigation, adequate seed data and sufficient CSS styling:
 - [ ] News Feed
 - [ ] Pictures/Albums
 - [ ] Likes
+
+## Design Docs
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
+
+[wireframes]: docs/wireframes
+[components]: docs/component-heirarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
