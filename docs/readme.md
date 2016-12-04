@@ -41,4 +41,28 @@ smooth bug-free navigation, adequate seed data and sufficient CSS styling:
 
 ### Phase 2: Profiles Model, API, components (1 day)
 
-**Objective:**
+**Objective:** Profiles can be created, read, edited, and displayed.
+
+### Phase 3: Friending (2 days)
+
+**Objective:** Users can friend other users, accept or deny another user's requests.
+
+### Phase 4: News Feed (2 days)
+
+**Objective:** Users can see posts of their friends and of themselves. Statuses and images can be posted.
+
+### Phase 5: Comments (1 day)
+
+**Objective:** Users can comment on posts.
+
+### Phase 6: Pagination / infinite scroll for news feed (1 Day)
+
+**Objective:** Add inifinite scroll for the News Feed.
+
+### Bonus Features (TBD)
+- [ ] Notifications
+- [ ] Likes
+- [ ] Comments on a comment
+- [ ] Search
+- [ ] Messaging
+- [ ] Picture/Albums
