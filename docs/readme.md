@@ -1,6 +1,6 @@
 # FoodieBook
 
-[Heroku Link]("https://foodiebook.herokuapp.com")
+[Heroku Link]["https://foodiebook.herokuapp.com"]
 
 ## Minimum Viable Product
 
@@ -36,3 +36,7 @@ smooth bug-free navigation, adequate seed data and sufficient CSS styling:
 ### Phase 1: Backend setup and Front End User Authentication (2 Days)
 
 **Objective:** Functioning rails project with front-end Authentication
+
+### Phase 2: Profiles Model, API, components (1 day)
+
+**Objective:**
