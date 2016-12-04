@@ -17,8 +17,6 @@ smooth bug-free navigation, adequate seed data and sufficient CSS styling:
 - [ ] Friending
 - [ ] Comments/posting on each other's walls
 - [ ] News Feed
-- [ ] Pictures/Albums
-- [ ] Likes
 
 ## Design Docs
 * [View Wireframes][wireframes]
