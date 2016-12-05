@@ -1,8 +1,10 @@
 # FoodieBook
 
 [Heroku Link][heroku]
+[Trello Link][trello]
 
 [heroku]: https://foodiebook.herokuapp.com
+[trello]: https://trello.com/b/Lq7rHnmb/fullstack-project
 
 ## Minimum Viable Product
 
