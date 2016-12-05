@@ -1,7 +1,7 @@
 ## Component Hierarchy
 
 * **App**
-  * **LoginPage**
+  * **LoginPage** (if not logged in)
     * New Session Form
     * Sign Up Form
     * Site explanation Container
@@ -28,7 +28,7 @@
         * Photo index item
       * Friend profile pictures index
         * Friend profile pictures index item
-    * **Profile post index container**
+    * Profile post index
       * New post form
       * profile post index item
     * **Profile about container**
@@ -37,6 +37,7 @@
         * friend index item
       * Profile photos index
         * profile photo index item
+        * profile add photo form
     * **Profile Edit**
       * Profile edit form
     * **Profile Friends**
@@ -45,15 +46,15 @@
 
 ## Routes
 
-* **component:** `App` **path:** `/`
-  * **component:** `LoginPage` **path:** none
-    * **component:** `NewSessionForm` **path:** create
-    * **component:** `NewUserForm` **path:** create
-  * **component:** `NewsfeedContainer` **path:** show
-  * **component:** `ProfileContainer` **path:** show
-  * **component:** `ProfileContainer` **path:** `users/:userId`
-    * **component:** `ProfileTimeline` **path:** `users/:userId`
-    * **component:** `ProfileAbout` **path:** `users/:userId/about`
-    * **component:** `ProfileFriends` **path:** `users/:userId/friends`
+| Path        | Component          |
+|-------------|--------------------|
+|"/login"     | LoginPage          |
+|"/"          | NewsfeedContainer  |
+|"/users/:userId" | Profile Container |
+|"users/:userId/about" | Profile About |
+|"users/:userId/edit" | Profile Edit  |
+|"users/:userId/friends"| Profile Friends |
+|"users/:userId/photos"| Profile Photos |
+|"/users/:userId/photos/add-photo"| Add Photo |
 
 NewsfeedContainer is the IndexRoute - default content to be displayed      

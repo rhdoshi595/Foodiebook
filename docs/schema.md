@@ -74,7 +74,7 @@ receiver_id    | integer   | not null, foreign key (references users), indexed
 type           | string    | not null
 date           | datetime  | not null
 
-## albums
+## photos
 column name    | data type | details
 ---------------|-----------|--------------------------------------------------
 id             | integer   | not null, primary key
