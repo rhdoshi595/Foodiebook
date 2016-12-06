@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "postinstall":"./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,9 @@
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
     "webpack": "^1.13.3"
+  },
+  "engines": {
+    "node": "6.2.1",
+    "npm": "3.9.3"
   }
 }
