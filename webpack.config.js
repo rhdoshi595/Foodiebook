@@ -19,7 +19,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'sorce-maps',
+  devtool: 'source-maps',
   resolve: {
     extensions: ["", ".js", ".jsx"]
   }
