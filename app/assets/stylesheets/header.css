@@ -75,6 +75,10 @@ body {
   border-top-right-radius: 2px;
 }
 
+.signin-input-item button:hover{
+  background: #365998;
+}
+
 .signin-button {
   margin-top: 14px;
 }
