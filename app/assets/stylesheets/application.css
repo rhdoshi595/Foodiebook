@@ -12,4 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require_reset
+ *= require_header
+ *= require_signup
+ *= require_footer
+ *= require_main-header
+ *= require_main-body
  */

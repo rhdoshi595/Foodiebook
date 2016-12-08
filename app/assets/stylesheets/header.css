@@ -1,0 +1,86 @@
+body {
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif ;
+}
+
+.signin-header {
+  width: 100%;
+  background: #365998;
+  color: white;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif ;
+}
+
+.signin-container {
+  width: 980px;
+  display: block;
+  height: 60px;
+  padding-top: 22px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: 600;
+  float: left;
+  margin-top: 5px;
+}
+
+.login-form {
+  float: right;
+  font-size: 12px;
+}
+
+.signin-form {
+  float: right;
+  font-size: 12px;
+}
+
+.signin-input-item {
+  float: left;
+}
+
+.signin-input-item label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signin-input-item input {
+  display: block;
+  margin-right: 15px;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border: 1px solid black;
+  width: 142px;
+  background: white;
+  color: black;
+}
+
+.signin-input-item .signin-button {
+  background: #4267b2;
+  border: 1px solid #29487d;
+  padding: 1px;
+  margin-top: 17px;
+}
+
+.signin-input-item button{
+  cursor: pointer;
+  background: #4267b2;
+  border: 1px solid #29487d;
+  color: white;
+  font-size: 12px;
+  padding: 3px 4px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.signin-button {
+  margin-top: 14px;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}

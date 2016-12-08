@@ -12,7 +12,7 @@ const Greeting = (props) => {
     if (props.currentUser) {
       return (
         <span>
-          <h2>Hi, {props.currentUser.email}!</h2>
+          <h2>Hi, {props.currentUser.first_name}!</h2>
           <br />
           <input type="button" value="Log Out" onClick={signOut}/>
         </span>

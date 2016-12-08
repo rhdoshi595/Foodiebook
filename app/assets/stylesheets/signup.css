@@ -1,0 +1,164 @@
+.signup-info-container {
+  background: #edf0f5;
+  padding-bottom: 30px;
+}
+
+.signup-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.signup-info-description {
+  float: left;
+  width: 565px;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+}
+
+.signup-form-container {
+  float: right;
+  width: 399px;
+  margin-bottom: 20px;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+}
+
+.signup-form-container input{
+  background: white;
+}
+
+.signup-info-description h3{
+  width: 450px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+  padding-top: 35px;
+  padding-bottom: 24px;
+}
+
+.signup-description-item {
+  font-size: 15px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: #666;
+  position: relative;
+}
+
+.signup-description-item p {
+  vertical-align: middle;
+  position: absolute;
+  top: 15px;
+  left: 70px;
+}
+
+.signup-description-item strong {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.signup-description-item .material-icons {
+  float: left;
+  color: #b7c2d7;
+  font-size: 48px;
+  text-shadow: 1px 1px #7b90b6;
+}
+
+.signup-form-container h2{
+  font-size: 36px;
+  font-weight: 600;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+  margin-bottom: 5px;
+}
+
+.signup-form-container h4{
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.signup-form-container form{
+   margin-top: 23px;
+}
+
+.signup-form-container input {
+  width:380px;
+  padding: 10px 8px;
+  font-size: 18px;
+  border: 1px solid rgb(189, 199, 216);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.signup-form-container select {
+  font-size: 13px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #bdc7d8;
+  float: left;
+}
+
+.birthday {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.gender-radio-buttons {
+  margin-top: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.gender-radio-buttons label {
+  margin-right: 20px;
+  vertical-align: baseline;
+}
+
+.gender-radio-buttons input {
+  width: auto;
+}
+
+.signup-submit-section .signup-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 152px;
+  height: 23px;
+  padding: 7px 20px;
+  font-size: 19px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(#67ae55, #578843);
+  background-color: #69a74e;
+  border-color: #2c5115;
+  box-shadow: inset 0 1px 1px #a4e388;
+  border-radius: 5px;
+  text-shadow: 1px 1px black;
+}
+
+.signup-submit-section .signup-button:hover {
+  background: linear-gradient(#79bc64, #578843);
+}
+
+footer {
+  border-top: 1px solid #dddfe2;
+  padding-top: 5px;
+  position: relative;
+  height: 290px;
+  background: #fff;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer div p {
+  width: 980px;
+  margin: 0px auto;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif ;
+  font-size: 12px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #737373;
+}

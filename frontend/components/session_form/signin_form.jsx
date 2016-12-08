@@ -44,7 +44,7 @@ class SignInForm extends React.Component {
           {errors}
         </ul>
 
-        <div>
+        <div className="signin-input-item">
           <label>Email
             <input
               type="text"
@@ -55,7 +55,7 @@ class SignInForm extends React.Component {
           </label>
         </div>
 
-        <div>
+        <div className="signin-input-item">
         <label>Password
           <input
             type="password"
@@ -66,7 +66,7 @@ class SignInForm extends React.Component {
         </label>
         </div>
 
-        <div>
+        <div className="signin-input-item signin-button">
           <button type="submit" name="submit">Log In</button>
         </div>
       </form>

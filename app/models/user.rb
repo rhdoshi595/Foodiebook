@@ -8,6 +8,10 @@
 #  session_token   :string           not null
 #  created_at      :datetime
 #  updated_at      :datetime
+#  first_name      :string
+#  last_name       :string
+#  gender          :string
+#  birthday        :datetime
 #
 
 class User < ActiveRecord::Base
@@ -18,6 +22,10 @@ class User < ActiveRecord::Base
   validates :password_digest, presence: true
   validates :session_token, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :gender, presence: true
+  validates :birthday, presence: true
 
   after_initialize :ensure_session_token
 
