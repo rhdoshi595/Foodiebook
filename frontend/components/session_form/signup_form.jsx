@@ -29,7 +29,7 @@ class SignUpForm extends React.Component{
                         {birthday: new Date(this.state.birthdayYear,
                                             this.state.birthdayMonth,
                                             this.state.birthdayDay)});
-    this.props.processSignUp(user).then(() => this.redirect(), (error) => console.log(error));
+    this.props.processSignUp(user).then(() => this.redirect());
   }
 
   update(field){
