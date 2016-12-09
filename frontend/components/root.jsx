@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import GreetingContainer from './greeting/greeting_container';
+import ProfilePageContainer from './profile/profile_page_container';
 
 class Root extends React.Component{
   constructor(props){
@@ -31,6 +32,8 @@ class Root extends React.Component{
           <Route path='/signin' component={ SessionFormContainer } onEnter={this._redirectifLoggedin}/>
           <Route path="/" component={App} >
             <IndexRoute component={ GreetingContainer } onEnter={this._ensureLoggedIn}/>
+            <Route path="users/:userId" component={ ProfilePageContainer } onEnter={this._ensureLoggedIn}/>
+
           </Route>
         </Router>
       </Provider>

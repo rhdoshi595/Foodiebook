@@ -1,0 +1,126 @@
+.profile-page-content {
+  position: relative;
+  width: 850px;
+  margin: 0 auto;
+  background: white;
+  margin-top: 40px;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+}
+
+.profile-cover-image{
+  height: 315px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  position: relative;
+  background-size: cover;
+}
+
+.profile-cover-info{
+  position: absolute;
+  bottom: 15px;
+  left: 205px;
+}
+
+.profile-cover-name{
+  color: white;
+  font-size: 24px;
+}
+
+.profile-cover-button{
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+}
+
+.profile-cover-friend-button{
+  background: #f6f7f9;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid black;
+}
+
+.profile-cover-friend-button:hover{
+  cursor: pointer;
+  background: #e9ebee;
+}
+
+.profile-header-bottom {
+  height: 45px;
+  position: relative;
+  border: 1px solid #e9eaed;
+
+}
+
+.profile-image {
+  padding: 5px;
+  background: white;
+  border: 1px solid #B3B3B3;
+  float: left;
+  margin: 0 auto;
+  position: absolute;
+  top: -140px;
+  left: 15px;
+}
+
+.profile-image-picture {
+  height: 160px;
+  width: 160px;
+  background-size: cover;
+}
+
+.profile-nav-bar {
+  border-left: 1px solid #e9eaed;
+  margin-left: 200px;
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+}
+
+.profile-nav-bar a {
+  color: #365899;
+  text-decoration: none;
+}
+
+.profile-nav-bar li {
+  float: left;
+  border-right: 1px solid #e9eaed;
+  padding: 15px 17px;
+}
+
+.profile-navigation li:hover {
+  background: #e9ebee;
+}
+
+.profile-left-sidebar {
+  float:left;
+  margin-top: 15px;
+  width: 330px;
+}
+
+.profile-left-sidebar-intro {
+  background: white;
+  border-top: 1px solid #e9eaed;
+  border-right: 1px solid #e9eaed;
+  border-bottom: 1px solid #e9eaed;
+  margin-bottom: 15px;
+}
+
+.profile-left-sidebar-photos {
+  background: white;
+  border-top: 1px solid #e9eaed;
+  border-right: 1px solid #e9eaed;
+  border-bottom: 1px solid #e9eaed;
+  margin-bottom: 15px;
+}
+
+.profile-posts {
+  margin-top: 15px;
+  border-top: 1px solid #e9eaed;
+  border-left: 1px solid #e9eaed;
+  border-bottom: 1px solid #e9eaed;
+  float: right;
+  margin-right: 1px;
+  width: 500px;
+  height: 100%;
+}

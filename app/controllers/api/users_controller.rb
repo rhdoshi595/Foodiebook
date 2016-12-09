@@ -11,7 +11,12 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-
+    @user = User.find(params[:id])
+    if @user
+      render :show
+    else
+      render json: ["No user found"], status: 404
+    end
   end
 
   private
@@ -23,7 +28,14 @@ class Api::UsersController < ApplicationController
       :first_name,
       :last_name,
       :gender,
-      :birthday
+      :birthday,
+      :profile_img,
+      :cover_img,
+      :workplace,
+      :school,
+      :current_city,
+      :hometown,
+      :relationship_status
     )
   end
 end

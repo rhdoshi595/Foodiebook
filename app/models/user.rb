@@ -2,16 +2,23 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  email           :string           not null
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  created_at      :datetime
-#  updated_at      :datetime
-#  first_name      :string
-#  last_name       :string
-#  gender          :string
-#  birthday        :datetime
+#  id                  :integer          not null, primary key
+#  email               :string           not null
+#  password_digest     :string           not null
+#  session_token       :string           not null
+#  created_at          :datetime
+#  updated_at          :datetime
+#  first_name          :string
+#  last_name           :string
+#  gender              :string
+#  birthday            :datetime
+#  profile_img         :string
+#  cover_img           :string
+#  workplace           :string
+#  school              :string
+#  current_city        :string
+#  hometown            :string
+#  relationship_status :string
 #
 
 class User < ActiveRecord::Base

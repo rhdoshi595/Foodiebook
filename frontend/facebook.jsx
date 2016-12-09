@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
+// import { getProfile } from './actions/user_actions';
+// import { fetchUser } from './util/user_api_util';
 // import * as SessionAPIUtil from './util/session_api_util';
 //
 // window.signup = SessionAPIUtil.signup;
 // window.signIn = SessionAPIUtil.signIn;
 // window.signOut = SessionAPIUtil.signOut;
+// window.fetchUser = fetchUser;
+// window.getProfile = getProfile;
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
