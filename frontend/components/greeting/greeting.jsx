@@ -1,31 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Greeting = (props) => {
-
-  function signOut()  {
-    props.signOut();
-    props.router.push('/signin');
+class Greeting extends React.Component {
+  constructor (props){
+    super(props);
+    this.signOut = this.signOut.bind(this);
+    this.currentUserFirstName = this.currentUserFirstName.bind(this);
   }
 
-  function signedIn(){
-    if (props.currentUser) {
-      return (
-        <span>
-          <h2>Hi, {props.currentUser.first_name}!</h2>
-          <br />
-          <input type="button" value="Log Out" onClick={signOut}/>
-        </span>
-      );
+  signOut()  {
+    this.props.signOut().then(
+      () => this.props.router.push('/signin')
+    );
+  }
+
+  currentUserFirstName() {
+    if (this.props.currentUser) {
+      return (this.props.currentUser.first_name);
+    } else {
+      return "";
     }
   }
 
-  return (
-    <section>
-      {signedIn()}
-    </section>
-  );
+  render () {
+    return (
+      <nav className="global-navbar">
+        <div className="navbar-container group">
 
-};
+          <div className="navbar-header">
+            <Link to="/" className="navbar-logo">
+              foodiebook
+            </Link>
+          </div>
 
+          <div className="navbar-signout">
+            <input type="button" value="Log Out" onClick={this.signOut} className="navbar-signout-button"/>
+          </div>
+
+        </div>
+      </nav>
+    );
+  }
+
+}
+// {signedIn()}
 export default Greeting;

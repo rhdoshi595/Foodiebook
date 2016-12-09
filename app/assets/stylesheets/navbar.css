@@ -1,0 +1,36 @@
+.global-navbar {
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif ;
+  background: #365998;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #1b3259;
+}
+
+.navbar-container{
+  width: 1000px;
+  height: 39px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+
+}
+
+.navbar-signout {
+  float: right;
+  margin-top: 11px;
+}
+
+.navbar-signout-button:hover{
+  cursor: pointer;
+}

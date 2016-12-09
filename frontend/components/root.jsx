@@ -31,9 +31,7 @@ class Root extends React.Component{
         <Router history={ hashHistory }>
           <Route path='/signin' component={ SessionFormContainer } onEnter={this._redirectifLoggedin}/>
           <Route path="/" component={App} >
-            <IndexRoute component={ GreetingContainer } onEnter={this._ensureLoggedIn}/>
             <Route path="users/:userId" component={ ProfilePageContainer } onEnter={this._ensureLoggedIn}/>
-
           </Route>
         </Router>
       </Provider>
@@ -43,3 +41,5 @@ class Root extends React.Component{
 
 
 export default Root;
+
+// <IndexRoute component={ GreetingContainer } onEnter={this._ensureLoggedIn}/>
