@@ -30,8 +30,8 @@ class Root extends React.Component{
       <Provider store={ store }>
         <Router history={ hashHistory }>
           <Route path='/signin' component={ SessionFormContainer } onEnter={this._redirectifLoggedin}/>
-          <Route path="/" component={App} >
-            <Route path="users/:userId" component={ ProfilePageContainer } onEnter={this._ensureLoggedIn}/>
+          <Route path="/" component={App} onEnter={this._ensureLoggedIn}>
+            <Route path="users/:userId" component={ ProfilePageContainer } />
           </Route>
         </Router>
       </Provider>

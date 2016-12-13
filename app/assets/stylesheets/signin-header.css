@@ -83,6 +83,11 @@ body {
   margin-top: 14px;
 }
 
+.guest-button {
+  margin-top: 14px;
+  padding-left: 4px;
+}
+
 .group:after {
   content: "";
   display: block;

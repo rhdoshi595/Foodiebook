@@ -9,10 +9,7 @@ class SignInForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount(){
-
+    this.demo = this.demo.bind(this);
   }
 
   redirect() {
@@ -23,6 +20,12 @@ class SignInForm extends React.Component {
     return event => this.setState({
       [field]: event.currentTarget.value
     });
+  }
+
+  demo(e){
+    e.preventDefault();
+    const demoUser = {email: 'bob@bobsburgers.com', password: '123456'};
+    this.props.processSignIn(demoUser).then(() => this.redirect());
   }
 
   handleSubmit(event){
@@ -68,6 +71,10 @@ class SignInForm extends React.Component {
 
         <div className="signin-input-item signin-button">
           <button type="submit" name="submit">Log In</button>
+        </div>
+
+        <div className="signin-input-item guest-button">
+          <button className="guest-signin-button" onClick={ this.demo }>Guest Login</button>
         </div>
       </form>
     );

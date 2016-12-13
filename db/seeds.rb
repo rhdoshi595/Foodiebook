@@ -8,7 +8,7 @@
 
 User.destroy_all
 
-scott = User.create(
+scott = User.create!(
   first_name: "Bob",
   last_name: "Belcher",
   gender: "male",
@@ -17,7 +17,7 @@ scott = User.create(
   email: "bob@bobsburgers.com"
 )
 
-linda = User.create(
+linda = User.create!(
   first_name: "Linda",
   last_name: "Belcher",
   gender: "female",
@@ -26,7 +26,7 @@ linda = User.create(
   email: "linda@bobsburgers.com"
 )
 
-tina = User.create(
+tina = User.create!(
   first_name: "Tina",
   last_name: "Belcher",
   gender: "female",
@@ -35,7 +35,7 @@ tina = User.create(
   email: "tina@middleschool.com"
 )
 
-gene = User.create(
+gene = User.create!(
   first_name: "Gene",
   last_name: "Belcher",
   gender: "male",
@@ -44,7 +44,7 @@ gene = User.create(
   email: "gene@middleschool.com"
 )
 
-louise = User.create(
+louise = User.create!(
   first_name: "Louise",
   last_name: "Belcher",
   gender: "female",
