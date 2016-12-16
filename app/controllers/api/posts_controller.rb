@@ -1,12 +1,25 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    if params.has_key?(:user_id)
+      user = User.find(params[:user_id])
+      user_posts = user.posts
+      received_posts = user.received_posts
+      @posts = user_posts + received_posts
+      render :index
+    else
+      @posts = Post.where(user_id: Friendship.active_friendships(current_user)).includes(:user, :receiver, {comments: [:user]}).order("created_at DESC")
+      render :index
+    end
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    @post = current_user.posts.new(post_params)
+    if params.has_key?(:user_id)
+      unless current_user.id == params[:user_id].to_i
+        @post.receiver_id = params[:user_id]
+      end
+    end
     if @post.save
       render :show
     else
@@ -26,7 +39,7 @@ class Api::PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if current_user.id == @post.user_id && @post.update(post_params)
-      render json: @post
+      render :show
     else
       render json: @post.errors.full_messages, status: 422
     end
@@ -46,7 +59,7 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:body)
+    params.require(:post).permit(:body, :image)
   end
 
 end

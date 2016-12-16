@@ -2,23 +2,31 @@
 #
 # Table name: users
 #
-#  id                  :integer          not null, primary key
-#  email               :string           not null
-#  password_digest     :string           not null
-#  session_token       :string           not null
-#  created_at          :datetime
-#  updated_at          :datetime
-#  first_name          :string
-#  last_name           :string
-#  gender              :string
-#  birthday            :datetime
-#  profile_img         :string
-#  cover_img           :string
-#  workplace           :string
-#  school              :string
-#  current_city        :string
-#  hometown            :string
-#  relationship_status :string
+#  id                         :integer          not null, primary key
+#  email                      :string           not null
+#  password_digest            :string           not null
+#  session_token              :string           not null
+#  created_at                 :datetime
+#  updated_at                 :datetime
+#  first_name                 :string
+#  last_name                  :string
+#  gender                     :string
+#  birthday                   :datetime
+#  profile_img                :string
+#  cover_img                  :string
+#  workplace                  :string
+#  school                     :string
+#  current_city               :string
+#  hometown                   :string
+#  relationship_status        :string
+#  profileavatar_file_name    :string
+#  profileavatar_content_type :string
+#  profileavatar_file_size    :integer
+#  profileavatar_updated_at   :datetime
+#  coverimage_file_name       :string
+#  coverimage_content_type    :string
+#  coverimage_file_size       :integer
+#  coverimage_updated_at      :datetime
 #
 
 class User < ActiveRecord::Base
@@ -33,6 +41,12 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   validates :gender, presence: true
   validates :birthday, presence: true
+
+  has_attached_file :profileavatar, default_url: "burgers.png"
+  validates_attachment_content_type :profileavatar, content_type: /\Aimage\/.*\Z/
+
+  has_attached_file :coverimage, default_url: "no-cover.png"
+  validates_attachment_content_type :coverimage, content_type: /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token
 

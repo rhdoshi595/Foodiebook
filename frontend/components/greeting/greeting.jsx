@@ -16,9 +16,9 @@ class Greeting extends React.Component {
 
   currentUserFirstName() {
     if (this.props.currentUser) {
-      return (this.props.currentUser.first_name);
+      return (<Link to={`/users/${this.props.currentUser.id}`}>{this.props.currentUser.first_name}</Link>);
     } else {
-      return "";
+      return (<div></div>);
     }
   }
 
@@ -33,7 +33,9 @@ class Greeting extends React.Component {
             </Link>
           </div>
 
-          <div className="navbar-signout">
+
+          <div className="navbar-components group">
+            <div>{this.currentUserFirstName()}</div>
             <input type="button" value="Log Out" onClick={this.signOut} className="navbar-signout-button"/>
           </div>
 

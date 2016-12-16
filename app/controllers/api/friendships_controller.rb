@@ -1,15 +1,17 @@
 class Api::FriendshipsController < ApplicationController
   def index
-    if params.has_key?(:user_id)
+    if(params[:user_id])
       render json: Friendship.find_friendship(current_user.id, params[:user_id])
     else
-      render json: ["Invalid user!"], status: 404
+      @friendships = Friendship.where("status = 'unanswered' AND replier_id = ?", current_user.id)
+      @friendships.includes(:sender)
+      render :index
     end
   end
 
   def show
-    @friend = Friendship.find(params[:id])
-    render json: @friend
+    @friendship = Friendship.find(params[:id])
+    render json: @friendship
   end
 
   def create
@@ -17,7 +19,7 @@ class Api::FriendshipsController < ApplicationController
       if current_user
         @friendship = Friendship.new(sender_id: current_user.id, replier_id: params[:user_id], status: "unanswered")
         if Friendship.friend_status(current_user.id, params[:user_id])
-          render json: ["Friendship already exists."], status: 404
+          render json: ["Already friends"], status: 404
         else
           if @friendship.save
             render json: @friendship
@@ -43,10 +45,10 @@ class Api::FriendshipsController < ApplicationController
           render json: @friendship.errors, status: 404
         end
       else
-        render json: ["Waiting on other party action"], status: 403
+        render json: ["Waiting on replier"], status: 403
       end
     else
-      render json: ["Friendship not found"], status: 404
+      render json: ["No friendship found"], status: 404
     end
   end
 
@@ -59,8 +61,8 @@ class Api::FriendshipsController < ApplicationController
         render json: @friendship.errors, status: 404
       end
     else
-      render json: ["Friendship not found"], status: 404
+      render json: ["No friendship found"], status: 404
     end
-
   end
+
 end

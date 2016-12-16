@@ -1,0 +1,39 @@
+.main-body {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 1010px;
+  font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.main-body-left{
+  float: left;
+  width: 170px;
+  position: fixed;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.main-body-content{
+  float: left;
+  width: 500px;
+  margin-left: 180px;
+  height: 100%;
+}
+
+.body-content-col {
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  width: 500px;
+  background: white;
+  box-shadow: 1px 1px #DFE0E4;
+}
+
+.main-body-right {
+  position: absolute;
+  right: 0 ;
+  margin-left: 10px;
+  width: 320px;
+  float: left;
+  font-size: 12px;
+}

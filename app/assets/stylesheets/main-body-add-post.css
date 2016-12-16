@@ -1,0 +1,83 @@
+.new-post-padded {
+  padding: 15px;
+}
+
+.new-post-photo-upload a {
+  font-size: 12px;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #3F609E;
+}
+
+.new-post-photo-upload a:hover{
+  cursor: pointer;
+  background: lightblue;
+}
+
+.new-post-thumb {
+  float: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.new-post-padded {
+  padding: 15px;
+}
+
+#profile-pic-input {
+  display: none;
+}
+
+.new-post-form textarea {
+  float: left;
+  padding: 10px;
+  font-size: 16px;
+  border: 0;
+  margin-top: 10px;
+  width: 400px;
+  resize: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.new-post-bottom {
+  border-top: 1px solid #e5e5e5;
+}
+
+.new-post-additions {
+  float: left;
+  margin: 14px 0;
+}
+
+.new-post-additions a{
+  color: #999CA4;
+  padding: 14px 14px;
+}
+
+.new-post-additions a:hover{
+  background: lightblue;
+}
+
+.new-post-attachment-name {
+  margin-top: 5px;
+  margin-left: 20px;
+  color: #999CA4;
+  font-size: 14px;
+}
+
+.new-post-form button {
+  float: right;
+  border: none;
+  background: #4267B2;
+  color: white;
+  border-radius: 0;
+  padding: 5px 15px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  margin-right: 20px;
+}

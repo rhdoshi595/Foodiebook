@@ -1,4 +1,4 @@
-import { FETCH_PROFILE } from '../actions/profile_actions';
+import { RECEIVE_PROFILE } from '../actions/profile_actions';
 import merge from 'lodash/merge';
 
 const _nullProfile = Object.freeze({
@@ -6,11 +6,11 @@ const _nullProfile = Object.freeze({
 });
 
 const ProfileReducer = (state = _nullProfile, action) => {
-
   Object.freeze(state);
   switch(action.type){
-    case FETCH_PROFILE:
-      return merge({}, _nullProfile, action);
+    case RECEIVE_PROFILE:
+      const newState = merge({}, _nullProfile, { profile: action.profile });
+      return newState;
     default:
       return state;
   }

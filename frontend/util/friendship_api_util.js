@@ -1,14 +1,14 @@
-export const findFriend = (friendId) => {
+export const findFriend = (friendUserId) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/users/${friendId}/friendships`
+    url: `/api/users/${friendUserId}/friendships`
   });
 };
 
-export const createFriend = (friendId) => {
+export const createFriend = (friendUserId) => {
   return $.ajax({
     method: 'POST',
-    url: `/api/users/${friendId}/friendships`
+    url: `/api/users/${friendUserId}/friendships`
   });
 };
 

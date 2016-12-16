@@ -27,11 +27,26 @@
 
 }
 
-.navbar-signout {
+.navbar-components {
   float: right;
   margin-top: 11px;
 }
 
-.navbar-signout-button:hover{
+.navbar-components div{
+  float: left;
+  border-right: 1px solid white;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+.navbar-components div:hover{
+  cursor: pointer;
+}
+
+.navbar-components input{
+  float: right;
+}
+
+.navbar-components input:hover{
   cursor: pointer;
 }

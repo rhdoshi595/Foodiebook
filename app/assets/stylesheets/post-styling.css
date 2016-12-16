@@ -1,0 +1,163 @@
+.post-content-post {
+  padding: 15px;
+}
+
+.post-content-header{
+  margin-bottom: 15px;
+}
+
+.post-content-thumb {
+  float: left;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.post-content-header-name {
+  margin-top: 5px;
+  float: left;
+  font-weight: bold;
+  color: #36589F;
+}
+
+.author-of-post {
+  float: left;
+  text-transform: capitalize;
+
+}
+
+.receiver-in-post {
+  float: left;
+}
+
+.receiver-user-arrow {
+  margin: 0 10px;
+  font-size: 10px;
+  color: #AAAAAA;
+}
+
+.post-content-header-timestamp {
+  color: #ADB2BB;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.post-dropdown {
+  float: right;
+  position: relative;
+}
+
+.post-dropdown:hover {
+  cursor: pointer;
+}
+
+.post-dropdown:hover .post-dropdown-options{
+  display: block;
+}
+
+.post-dropdown-options{
+  display: none;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  border: 1px solid #DDDFE2;
+  background: white;
+  border-radius: 3px;
+}
+
+.post-dropdown-options li {
+  list-style: none;
+  padding: 5px 7px;
+}
+
+.post-dropdown-options li:hover {
+  background: #DDDFE2;
+}
+
+.post-dropdown-options li:first-child {
+  border-bottom: 1px solid #DDDFE2;
+}
+
+.post-body-text .edit-hidden{
+  display: none;
+}
+
+.post-body-text textarea{
+  width: 100%;
+  height: 60px;
+  resize: none;
+}
+
+.post-body-edit-done:hover{
+  cursor: pointer;
+  background: #3B5998;
+}
+
+.post-body-edit-done{
+  padding: 5px;
+  float: right;
+
+}
+
+
+
+
+.post-content-body {
+  margin-bottom: 20px;
+}
+
+.post-image {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.post-content-actions {
+  border-top: 1px solid #DDDFE2;
+  padding: 10px;
+}
+
+.post-content-actions-comment {
+  font-size: 14px;
+  color: #ADB2BB;
+  float: left;
+  cursor: pointer;
+}
+
+.post-content-actions-comment:hover  {
+  text-decoration: underline;
+}
+
+.post-content-footer {
+  background: #F6F7F9;
+  border-top: 1px solid #DDDFE2;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.post-comment-author {
+  float: left;
+  font-weight: bold;
+  margin-right: 5px;
+  color: #36589F;
+}
+
+.post-comment-text {
+  float: left;
+  width: 425px;
+}
+
+.post-comment-article {
+  margin-bottom: 15px;
+}
+
+.post-comment-add-comment-form input{
+  background: white;
+  width: 100%;
+  border: 1px solid #DDDFE2;
+  padding: 5px;
+  box-sizing: border-box;
+}
