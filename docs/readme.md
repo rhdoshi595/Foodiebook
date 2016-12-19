@@ -43,7 +43,7 @@ smooth bug-free navigation, adequate seed data and sufficient CSS styling:
 
 **Objective:** Profiles can be created, read, edited, and displayed.
 
-### Phase 3: Friending (2 days)
+### Phase 3: Friending (3 days)
 
 **Objective:** Users can friend other users, accept or deny another user's requests.
 
@@ -54,10 +54,6 @@ smooth bug-free navigation, adequate seed data and sufficient CSS styling:
 ### Phase 5: Comments (1 day)
 
 **Objective:** Users can comment on posts.
-
-### Phase 6: Pagination / infinite scroll for news feed (1 Day)
-
-**Objective:** Add inifinite scroll for the News Feed.
 
 ### Bonus Features (TBD)
 - [ ] Notifications
