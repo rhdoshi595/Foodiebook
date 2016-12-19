@@ -30,7 +30,7 @@
   position: absolute;
   bottom: 15px;
   right: 30px;
-  background: grey;
+  background: #F6F7F9;
   color: black;
   height: 22px;
   width: 150px;
@@ -45,21 +45,38 @@
   cursor: pointer;
 }
 
+.profile-cover-buttons {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+}
+
+.profile-cover-friend {
+  background: #F6F7F9;
+  font-size: 14px;
+  padding: 4px 9px;
+  border: 1px solid black;
+}
+
+.profile-cover-friend:hover {
+  background: #E9EBEE;
+  cursor: pointer;
+}
+
 .friending-button {
   position: absolute;
   bottom: 15px;
   right: 30px;
-  background: grey;
+  background: #F6F7F9;
   color: black;
   height: 20px;
-  width: 110px;
   padding: 2px;
   border: 1px solid #B3B3B3;
 }
 
 .friending-button:hover {
   color: black;
-  background:lightgrey;
+  background:#E9EBEE;
   cursor: pointer;
 }
 
@@ -97,6 +114,7 @@
 }
 
 .profile-image-picture:hover .profile-avatar-edit {
+  cursor: pointer;
   display: block;
 }
 
@@ -114,7 +132,6 @@
   color: white;
   background:black;
   opacity: 0.5;
-
 }
 
 #profile-avatar-input{
