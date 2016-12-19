@@ -51,21 +51,6 @@
   right: 30px;
 }
 
-.profile-cover-friend {
-  background: #F6F7F9;
-  position: absolute;
-  bottom: 15px;
-  right: 30px;
-  font-size: 14px;
-  padding: 4px 9px;
-  border: 1px solid black;
-}
-
-.profile-cover-friend:hover {
-  background: #E9EBEE;
-  cursor: pointer;
-}
-
 .friending-button {
   position: absolute;
   bottom: 15px;
