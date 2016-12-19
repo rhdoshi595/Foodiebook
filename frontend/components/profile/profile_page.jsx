@@ -110,18 +110,18 @@ class ProfilePage extends React.Component {
         //if current user and other user have friendship
         //then unfriend button should render on friend profile page
         return (
-          <div onClick={ this.removeFriend }>Unfriend</div>
+          <div className="friending-button" onClick={ this.removeFriend }>Unfriend</div>
         );
       } else {
         if(parseInt(this.props.friendship.sender_id) === parseInt(this.props.params.userId)){
           //if current user has been sent a friend request from user whose
           //profile is being visited so accept friend ship button
           return (
-            <div onClick={this.acceptFriend}>Accept Request</div>
+            <div className="friending-button" onClick={this.acceptFriend}>Accept Request</div>
           );
         } else {
           return (
-            <div onClick={this.removeFriend}>Unanswered</div>
+            <div className="friending-button" onClick={this.removeFriend}>Unanswered</div>
           );
         }
       }
@@ -132,7 +132,7 @@ class ProfilePage extends React.Component {
           return this.updateCoverImageButton();
         } else {
           //if on someone else's profile page if not in friendship table
-          return (<div onClick={ this.createFriend }>Add Friend</div>);
+          return (<div  className="friending-button" onClick={ this.createFriend }>Add Friend</div>);
         }
       }
     }
