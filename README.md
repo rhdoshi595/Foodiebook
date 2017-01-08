@@ -5,8 +5,7 @@
 [Project proposal circa 12/3/16](docs/README.md)
 
 Foodiebook is a clone of Facebook built using Ruby, Rails, React, Redux, and PostgreSQL.
-The purpose of this project is to solidify what we learned over the past several months at
-App Academy NYC. The clone features fake profiles from the show Bob's Burgers.
+The clone features fake profiles from the show Bob's Burgers and Archer.
 
 ![foodiebook](/docs/demo-pics/login-signup-page.png)
 
@@ -38,6 +37,10 @@ Post.where("receiver_id = ? or (receiver_id IS NULL and user_id = ?)", params[:u
 ```
 
 ![foodiebook](/docs/demo-pics/newsfeed.png)
+
+### Likes
+Likes can be given to posts with a single click. The number of likes are tabulated on a post above the list of comments of
+a certain posts. 
 
 ### Comments
 Comments can be added to posts with a single keystroke. Comments have an 'enter/return' listener to know when to submit the form. The comment tables have columns which reference a user and a post. Thus a comment belongs to an author and a post.

@@ -12,10 +12,11 @@ Rails.application.routes.draw do
 
     resources :posts, only: [:create, :show, :update, :destroy, :index] do
       resources :comments, only: [:index, :create]
+      resources :likes, only: [:index, :create]
     end
 
     resources :comments, only: [:destroy]
-
+    resources :likes, only: [:destroy]
     resource :session, only: [:create, :destroy]
   end
 

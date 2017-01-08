@@ -65,6 +65,15 @@ class User < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :sender_id
 
+  has_many :comments,
+    class_name: :Comment,
+    primary_key: :id,
+    foreign_key: :user_id
+
+  has_many :likes,
+    class_name: :Like,
+    primary_key: :id,
+    foreign_key: :user_id
 
   def password=(password)
     @password = password

@@ -23,3 +23,15 @@ if post.comments
     end
   end
 end
+if post.likes
+  json.likes do
+    post.likes.each do |like|
+      json.set! like.id do
+        json.likeId like.id
+        json.userId like.user.id
+        json.user_first_name like.user.first_name
+        json.user_last_name like.user.last_name
+      end
+    end
+  end
+end

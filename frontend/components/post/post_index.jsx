@@ -20,7 +20,7 @@ class PostIndex extends React.Component {
 
   componentWillUpdate(nextProps){
     if(this.props.userId !== nextProps.userId){
-      
+
       this.props.fetchPosts(parseInt(nextProps.userId));
     }
   }
@@ -51,6 +51,69 @@ class PostIndex extends React.Component {
           return (
             <div className="receiver-in-post">
               {arrow}<Link to={`/users/${posts[postId].receiver.id}`}>{posts[postId].receiver.first_name} {posts[postId].receiver.last_name}</Link>
+            </div>
+          );
+        }
+      };
+
+      let addLike = () => {
+        this.props.addLike(postId).then(
+          (success) => {this.props.fetchPost(success.like.post_id);}
+        );
+      };
+
+      let removeLike = (likeId, likePostId) => {
+        this.props.removeLike(likeId).then(
+          (success) => {this.props.fetchPost(likePostId);}
+        );
+      };
+
+      let likeButton = () => {
+
+        let currentUserId = () => {
+          if (store.getState().session.currentUser){
+            return store.getState().session.currentUser.id;
+          } else {
+            return null;
+          }
+        };
+
+        let liked = false;
+        let likeId;
+        let likePostId;
+
+        if (posts[postId].likes) {
+          Object.keys(posts[postId].likes).forEach((key)=> {
+            if (posts[postId].likes[key].userId === currentUserId()) {
+              likeId = key;
+              likePostId = postId;
+              liked = true;
+            }
+          });
+        }
+
+        if (!liked) {
+          return (
+            <div className="post-content-actions-like" onClick={addLike}>
+              <i className="material-icons">thumb_up</i> Like
+            </div>
+          );
+        } else {
+          return (
+            <div className="post-content-actions-like liked" onClick={() => removeLike(likeId, likePostId)}>
+              <i className="material-icons">thumb_up</i> Liked
+            </div>
+          );
+        }
+      };
+
+      let postLikes = () => {
+        if(posts[postId].likes){
+          const numOfLikes = Object.keys(posts[postId].likes).length;
+          const likeOrLikes = numOfLikes > 1 ? "likes" : "like";
+          return(
+            <div className="post-content-likes">
+              <i className="material-icons">thumb_up</i> {numOfLikes} {likeOrLikes}
             </div>
           );
         }
@@ -141,12 +204,15 @@ class PostIndex extends React.Component {
             </div>
 
             <div className="post-content-actions group">
+              {likeButton()}
+
               <div className="post-content-actions-comment" onClick={selectCommentBox}>
                 Comment
               </div>
             </div>
 
             <div className="post-content-footer">
+              {postLikes()}
               <div className="post-content-comments">
                 <PostComments comments={posts[postId].comments} postId={postId}/>
               </div>

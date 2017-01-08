@@ -19,8 +19,10 @@ class PostComments extends React.Component {
       let comments = this.props.comments;
       let commentKeys = Object.keys(this.props.comments);
       return commentKeys.map((key) => {
+        const picStyle = {backgroundImage:"url("+comments[key].user_pic+")"};
         return (
           <div key={key} className="post-comment-article group">
+            <div className="post-comment-pic" style={picStyle}></div>
             <div className="post-comment-text">
               <div className="post-comment-author">
                 <Link to={`/users/${comments[key].user_id}`}>{comments[key].user_first_name} {comments[key].user_last_name}</Link>

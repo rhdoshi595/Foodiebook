@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import { fetchPosts, createPost, fetchPost, editPost, removePost } from '../../actions/post_actions';
 import PostIndex from './post_index';
+import { withRouter } from 'react-router';
+import { addLike, removeLike } from '../../actions/like_actions';
 
 const mapStateToProps = (state) => {
   function sortedKeys(posts){
@@ -30,10 +32,12 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchPost: (postId) => dispatch(fetchPost(postId)),
   createPost: (post) => dispatch(createPost(post)),
   editPost: (postData, postId) => dispatch(editPost(postData, postId)),
-  removePost: (postId) => dispatch(removePost(postId))
+  removePost: (postId) => dispatch(removePost(postId)),
+  addLike: (postId) => dispatch(addLike(postId)),
+  removeLike: (likeId) => dispatch(removeLike(likeId))
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(PostIndex);
+)(PostIndex));
