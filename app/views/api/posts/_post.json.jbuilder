@@ -16,6 +16,7 @@ if post.comments
       json.set! comment.id do
         json.partial! 'api/comments/comment', comment: comment
         json.user_pic comment.user.profileavatar.url
+        json.post_id comment.post.id
         json.user_id comment.user.id
         json.user_first_name comment.user.first_name
         json.user_last_name comment.user.last_name

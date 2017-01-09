@@ -186,10 +186,31 @@
   width: 390px;
   margin-top: 5px;
   overflow: hidden;
+  position: relative;
 }
 
 .post-comment-body{
+  float:left;
+
+  margin: 0px;
+  display: block;
 }
+
+.comment-delete {
+  position: absolute;
+  width: 15px;
+  right: 0px;
+}
+
+.comment-delete:hover {
+  cursor: pointer;
+}
+
+.comment-delete .material-icons{
+  font-size: 16px;
+}
+
+
 
 .post-comment-pic {
   float: left;

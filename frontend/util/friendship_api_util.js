@@ -25,3 +25,10 @@ export const acceptFriend = (friendshipId) => {
     url: `/api/friendships/${friendshipId}`
   });
 };
+
+export const findFriendRequests = () => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/friends'
+  });
+};
