@@ -1,15 +1,15 @@
 {
   "name": "FacebookClone",
   "version": "1.0.0",
-  "description": "== README",
+  "description": "Foodiebook was built using Ruby on Rails, JavaScript, React.js",
   "main": "index.js",
   "directories": {
+    "doc": "docs",
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack",
-    "postinstall": "./node_modules/.bin/webpack"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js",
+    "webpack": "webpack -w"
   },
   "repository": {
     "type": "git",
