@@ -10,8 +10,36 @@
   float: left;
   width: 170px;
   position: fixed;
-  font-size: 12px;
+  font-size: 10px;
   margin-right: 10px;
+}
+
+.main-left-title {
+  font-size: 15px;
+  padding-left: 7px;
+  padding-bottom: 5px;
+}
+
+.main-body-left .material-icons {
+  transform: translateY(15%);
+  font-size: 14px;
+}
+
+.main-body-left ul {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.main-body-left li {
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+.main-body-left li:hover{
+  padding: 5px;
+  background: #F6F7F9;
+  box-sizing: border-box;
+  border: 1px solid #DDDFE2;
 }
 
 .main-body-content{
@@ -30,10 +58,49 @@
 }
 
 .main-body-right {
-  position: absolute;
-  right: 0 ;
-  margin-left: 10px;
-  width: 320px;
+  width: 300px;
+  margin-left: 20px;
   float: left;
   font-size: 12px;
+  position: fixed;
+  right: 260px;
+}
+
+.body-right-col {
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  width: 300px;
+  background: white;
+  box-shadow: 1px 1px #DFE0E4;
+}
+
+.body-right-col img{
+  width: 250px;
+  height: 130px;
+}
+
+.main-right-p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px transparent lightgray;
+}
+
+#main-right-title{
+  font-size: 15px;
+}
+
+.main-right-title{
+  font-size: 15px;
+  padding-bottom: 5px;
+
+}
+
+.built-with{
+  padding-top: 5px;
+  list-style: none;
+}
+
+.built-with li{
+  margin-top: 5px;
 }

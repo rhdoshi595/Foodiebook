@@ -100,10 +100,9 @@
 .post-body-edit-done{
   padding: 5px;
   float: right;
-
+  background: #3B5998;
+  color: white;
 }
-
-
 
 
 .post-content-body {
