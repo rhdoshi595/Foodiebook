@@ -33,6 +33,8 @@ class Greeting extends React.Component {
   }
 
   componentDidMount(){
+    this.props.findFriendRequests();
+
     let searchResultDisplay = $(document).find('.search-results');
 
     $(document).find('.header-searchbar input').focus(() => {
@@ -104,7 +106,6 @@ class Greeting extends React.Component {
             <div>{this.currentUserFirstName()}</div>
             <input type="button" value="Log Out" onClick={this.signOut} className="navbar-signout-button"/>
           </div>
-
         </div>
       </nav>
     );

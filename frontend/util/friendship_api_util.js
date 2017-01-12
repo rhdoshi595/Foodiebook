@@ -29,6 +29,6 @@ export const acceptFriend = (friendshipId) => {
 export const findFriendRequests = () => {
   return $.ajax({
     method: 'GET',
-    url: '/api/friends'
+    url: '/api/friendships'
   });
 };

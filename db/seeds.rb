@@ -125,35 +125,35 @@ pesto_junior = User.create!(
   profileavatar: File.open('app/assets/images/seeds_images/jimmy-jr-avatar.jpg')
 )
 
-# frond = User.create!(
-#   first_name: "Philip",
-#   last_name: "Frond",
-#   gender: "male",
-#   birthday: 46.years.ago,
-#   password: "password",
-#   email: "philip@schoolcounselor.com",
-#   school: "Self-certified",
-#   current_city: "Little Egg Harbor, New Jersey",
-#   hometown: "Philadelphia, PA",
-#   workplace: "Flagstaff Middle School",
-#   profileavatar: File.open('app/assets/images/seeds_images/philip-profile-avatar.png'),
-#   coverimage: File.open('app/assets/images/seeds_images/philip-cover.jpeg')
-# )
-#
-# gayle = User.create!(
-#   first_name: "Gayle",
-#   last_name: "Cats",
-#   gender: "female",
-#   birthday: 34.years.ago,
-#   password: "123456",
-#   email: "gayle@hypochondriac.com",
-#   school: "Notary school",
-#   workplace: "First State Bank",
-#   current_city: "Atlantic City, New Jersey",
-#   hometown: "Hoboken, NJ",
-#   profileavatar: File.open('app/assets/images/seeds_images/gayle-profile.jpeg'),
-#   coverimage: File.open('app/assets/images/seeds_images/gayle-cover.jpg')
-# )
+frond = User.create!(
+  first_name: "Philip",
+  last_name: "Frond",
+  gender: "male",
+  birthday: 46.years.ago,
+  password: "password",
+  email: "philip@schoolcounselor.com",
+  school: "Self-certified",
+  current_city: "Little Egg Harbor, New Jersey",
+  hometown: "Philadelphia, PA",
+  workplace: "Flagstaff Middle School",
+  profileavatar: File.open('app/assets/images/seeds_images/philip-profile-avatar.png'),
+  coverimage: File.open('app/assets/images/seeds_images/philip-cover.jpeg')
+)
+
+gayle = User.create!(
+  first_name: "Gayle",
+  last_name: "Cats",
+  gender: "female",
+  birthday: 34.years.ago,
+  password: "123456",
+  email: "gayle@hypochondriac.com",
+  school: "Notary school",
+  workplace: "First State Bank",
+  current_city: "Atlantic City, New Jersey",
+  hometown: "Hoboken, NJ",
+  profileavatar: File.open('app/assets/images/seeds_images/gayle-profile.jpeg'),
+  coverimage: File.open('app/assets/images/seeds_images/gayle-cover.jpg')
+)
 
 bobPost1 = bob.posts.create(created_at: rand(360).days.ago, receiver: linda, body: 'The kids are causing a mess in the restaurant')
 bobPost2 = bob.posts.create(created_at: rand(360).days.ago, body: 'Get the best burgers in town 1 block away from the boardwalk')
@@ -171,6 +171,30 @@ pesto_seniorPost1 = pesto_senior.posts.create(created_at: rand(360).days.ago, bo
 pesto_seniorPost2 = pesto_senior.posts.create(created_at: rand(360).days.ago, body: "Best Pizza in town", image: File.open('app/assets/images/seeds_images/pizzeria.jpg'))
 pesto_juniorPost1 = pesto_junior.posts.create(created_at: rand(360).days.ago, body: "Dancing is awesome")
 pesto_juniorPost2 = pesto_junior.posts.create(created_at: rand(360).days.ago, body: "Want to see some magic come to Pesto's Pizzeria", image: File.open('app/assets/images/seeds_images/pizzeria.jpg'))
+frondPost1 = frond.posts.create(created_at: rand(360).days.ago, receiver: tina, body: 'Come to my "Feelings are important" event')
+frondPost2 = frond.posts.create(created_at: rand(360).days.ago, body: 'Parent teacher conferences are so much fun')
+gaylePost1 = gayle.posts.create(created_at: rand(360).days.ago, receiver: linda, body: "I'm going to knit you a sweater")
+gaylePost2 = gayle.posts.create(created_at: rand(360).days.ago, body: "Missing you", image: File.open('app/assets/images/seeds_images/gayle_post.png'))
 
 Friendship.create(sender_id: bob.id, replier_id: linda.id, status: "friended")
+Friendship.create(sender_id: bob.id, replier_id: gene.id, status: "friended")
+Friendship.create(sender_id: bob.id, replier_id: louise.id, status: "unanswered")
+Friendship.create(sender_id: bob.id, replier_id: teddy.id, status: "friended")
+Friendship.create(sender_id: linda.id, replier_id: gayle.id, status: "friended")
+Friendship.create(sender_id: linda.id, replier_id: gene.id, status: "friended")
+Friendship.create(sender_id: linda.id, replier_id: louise.id, status: "unanswered")
 Friendship.create(sender_id: tina.id, replier_id: bob.id, status: "friended")
+Friendship.create(sender_id: tina.id, replier_id: linda.id, status: "friended")
+Friendship.create(sender_id: tina.id, replier_id: gene.id, status: "friended")
+Friendship.create(sender_id: tina.id, replier_id: louise.id, status: "friended")
+Friendship.create(sender_id: tina.id, replier_id: pesto_junior.id, status: "friended")
+Friendship.create(sender_id: gene.id, replier_id: louise.id, status: "unanswered")
+Friendship.create(sender_id: frond.id, replier_id: tina.id, status: "friended")
+Friendship.create(sender_id: frond.id, replier_id: bob.id, status: "friended")
+Friendship.create(sender_id: frond.id, replier_id: linda.id, status: "unanswered")
+Friendship.create(sender_id: frond.id, replier_id: pesto_senior.id, status: "friended")
+Friendship.create(sender_id: bob.id, replier_id: pesto_senior.id, status: "unanswered")
+Friendship.create(sender_id: pesto_junior.id, replier_id: bob.id, status: "unanswered")
+Friendship.create(sender_id: pesto_junior.id, replier_id: pesto_senior.id, status: "friended")
+Friendship.create(sender_id: gayle.id, replier_id: bob.id, status: "unanswered")
+Friendship.create(sender_id: gayle.id, replier_id: tina.id, status: "friended")
