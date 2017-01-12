@@ -62,8 +62,8 @@
   margin-left: 20px;
   float: left;
   font-size: 12px;
-  position: fixed;
-  right: 260px;
+  position: absolute;
+  right: 10px;
 }
 
 .body-right-col {
