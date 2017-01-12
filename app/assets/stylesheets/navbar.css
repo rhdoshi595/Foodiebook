@@ -27,6 +27,113 @@
 
 }
 
+.searchbar-component {
+  margin-top: 9px;
+  float: left;
+}
+
+.header-logo {
+  width: 24px;
+  height: 24px;
+  background: white;
+  text-align: right;
+  border-radius: 2px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #3b5998;
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.header-searchbar {
+  float: left;
+  position: relative;
+}
+
+.header-searchbar .search-results {
+  padding: 0px;
+  position: absolute;
+  width: 345px;
+  background: white;
+  top: 25px;
+  border-radius: 2px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+}
+
+.search-results ul {
+  list-style: none;
+}
+
+.search-results li {
+  color: #36589F;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid lightgray;
+}
+
+.search-results li:hover{
+  background: #365998;
+  color: white;
+}
+
+.search-results .search-result-name {
+  float: left;
+  margin-top: 5px;
+}
+
+.search-result-photo {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  margin-right: 15px;
+}
+
+.header-searchbar input {
+  font-size: 14px;
+  padding: 3px 5px 4px 5px;
+  width: 340px;
+  border:0;
+  border-radius: 2px;
+  float: left;
+  font-weight: lighter;
+  background: white;
+  color: black;
+}
+.header-searchbar input:focus + .search-results {
+   outline: none;
+   background: blue;
+}
+
+.header-searchbar .hide-results {
+  display: none;
+}
+
+.header-searchbar button {
+  background: lightgray;
+  width: 30px;
+  border: none;
+  margin-left: -5px;
+  height: 23px;
+  float: left;
+  padding-left: 10px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.header-searchbar button:hover {
+  background: #4080FF;
+}
+
+.header-searchbar .material-icons {
+  margin-top: 2px;
+  font-size: 20px;
+}
+
 .navbar-components {
   float: right;
   margin-top: 11px;

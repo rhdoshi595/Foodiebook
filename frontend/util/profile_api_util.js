@@ -14,3 +14,11 @@ export const updateProfile = (data, id) => {
     contentType: false
   });
 };
+
+export const searchUser = (searchString) => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/users',
+    data: {search: searchString}
+  });
+};

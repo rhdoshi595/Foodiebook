@@ -90,6 +90,10 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  def self.search(search_string)
+    User.where("LOWER(CONCAT(first_name, last_name)) LIKE LOWER('%#{search_string}%') AND ? != '' ", search_string)
+  end
+
   def self.find_by_credentials(email, password)
     @user = User.find_by(email: email)
     return nil unless @user && @user.valid_password?(password)
