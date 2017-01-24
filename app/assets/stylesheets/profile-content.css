@@ -150,10 +150,16 @@
   background: #e9ebee;
 }
 
+.profile-container{
+  display: flex;
+  width: 850px;
+}
+
 .profile-left-sidebar {
   float:left;
   margin-top: 15px;
   width: 335px;
+  height: 100%;
 }
 
 .profile-left-sidebar-intro {
@@ -223,7 +229,7 @@
 
 .profile-posts {
   margin-top: 15px;
-  float: right;
+  margin-left: 15px;
   margin-right: 1px;
   width: 500px;
   height: 100%;

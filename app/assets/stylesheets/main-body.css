@@ -16,6 +16,7 @@
 
 .main-left-title {
   font-size: 15px;
+
   padding-left: 7px;
   padding-bottom: 5px;
 }
@@ -60,10 +61,9 @@
 .main-body-right {
   width: 300px;
   margin-left: 20px;
-  float: left;
   font-size: 12px;
-  position: absolute;
-  right: 10px;
+  position: fixed;
+  right: 330px;
 }
 
 .body-right-col {

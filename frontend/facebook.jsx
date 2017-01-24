@@ -4,15 +4,6 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { editPost } from './actions/post_actions';
 
-// import { getProfile } from './actions/user_actions';
-// import { fetchUser } from './util/user_api_util';
-// import * as SessionAPIUtil from './util/session_api_util';
-//
-// window.signup = SessionAPIUtil.signup;
-// window.signIn = SessionAPIUtil.signIn;
-// window.signOut = SessionAPIUtil.signOut;
-// window.fetchUser = fetchUser;
-// window.getProfile = getProfile;
 window.editPost = editPost;
 
 

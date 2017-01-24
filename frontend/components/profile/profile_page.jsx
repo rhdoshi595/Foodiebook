@@ -251,27 +251,25 @@ class ProfilePage extends React.Component {
               </div>
 
               <ul className="profile-nav-bar">
-                <li><a href="#">Timeline</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Friends</a></li>
-                <li><a href="#">Photos</a></li>
+                <li><a>Timeline</a></li>
               </ul>
             </div>
 
           </header>
+          <div className="profile-container">
+            <div className="profile-left-sidebar">
+              <div className="profile-left-sidebar-intro">
+                <h4>Intro</h4>
+                {this.introUser()}
+              </div>
 
-          <div className="profile-left-sidebar">
-            <div className="profile-left-sidebar-intro">
-              <h4>Intro</h4>
-              {this.introUser()}
+              {this.editForm()}
             </div>
 
-            {this.editForm()}
-          </div>
-
-          <div className="profile-posts">
-            <PostIndexContainer userId={this.props.params.userId}/>
-          </div>
+            <div className="profile-posts">
+              <PostIndexContainer userId={this.props.params.userId}/>
+            </div>
+        </div>
         </section>
 
       </div>
