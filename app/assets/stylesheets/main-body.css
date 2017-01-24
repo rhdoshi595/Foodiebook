@@ -61,8 +61,8 @@
 .main-body-right {
   width: 300px;
   font-size: 12px;
-  position: fixed;
-  right: 250px;
+  position: absolute;
+  right: 15px;
 }
 
 .body-right-col {
