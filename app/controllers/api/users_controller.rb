@@ -4,6 +4,11 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user
       sign_in(@user)
+      # if User.find_by(email: 'jimmy_junior@pizza.com')
+      #   Friendship.create(sender_id: User.find_by(email: 'jimmy_junior@pizza.com').id,
+      #                     replier_id: current_user.id,
+      #                     status: 'unanswered')
+      # end
       render :show
     else
       render json: @user.errors.full_messages, status:422

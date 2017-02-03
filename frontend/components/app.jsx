@@ -11,7 +11,7 @@ const App = ({ children }) => {
         <div className="main-body-left">
           <strong className="main-left-title">Links</strong>
           <ul className="main-left-mainlinks">
-            <a href="https://rhdoshi595.github.io/portfolio/">
+            <a href="http://rahuldoshi.co/">
               <li><i className="material-icons">portrait</i> Portfolio Site</li>
             </a>
             <a href="https://github.com/rhdoshi595">
@@ -20,10 +20,10 @@ const App = ({ children }) => {
             <a href="https://www.linkedin.com/in/rahul-doshi-2b1a53132">
               <li><i className="material-icons">work</i> LinkedIn</li>
             </a>
-            <a href="https://rhdoshi595.github.io/Snake-with-jUtility/">
+            <a href="http://rahuldoshi.co/jUtil/">
               <li><i className="material-icons">gamepad</i> Snake Demo of jUtility</li>
             </a>
-            <a href="https://rhdoshi595.github.io/Helicopter/">
+            <a href="http://rahuldoshi.co/Saving-Nemo/">
               <li><i className="material-icons">gamepad</i> Saving Nemo</li>
             </a>
           </ul>
