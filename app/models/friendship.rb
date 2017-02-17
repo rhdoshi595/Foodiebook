@@ -78,4 +78,17 @@ class Friendship < ActiveRecord::Base
     end
     return nil
   end
+
+  def self.pending_friendships(user)
+    pendings = Friendship
+      .where("sender_id = #{user.id} OR replier_id = #{user.id}")
+      .where("status = 'unanswered'")
+      .pluck(:sender_id, :replier_id)
+      .flatten
+      .uniq
+
+    pendings.delete(user.id)
+
+    pendings
+  end
 end
