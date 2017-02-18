@@ -88,7 +88,26 @@ class Friendship < ActiveRecord::Base
       .uniq
 
     pendings.delete(user.id)
-
     pendings
+  end
+
+  def self.requesting_friendships(user)
+    sent_requests = Friendship
+      .where("sender_id = #{user.id}")
+      .where("status = 'unanswered'")
+      .pluck(:replier_id)
+      .uniq
+
+    sent_requests
+  end
+
+  def self.requested_friendships(user)
+    friend_requests = Friendship
+      .where("replier_id = #{user.id}")
+      .where("status = 'unanswered'")
+      .pluck(:sender_id)
+      .uniq
+
+    friend_requests
   end
 end

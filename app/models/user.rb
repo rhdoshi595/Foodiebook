@@ -100,6 +100,22 @@ class User < ActiveRecord::Base
     @user
   end
 
+  def active_friendships
+    User.where(id: Friendship.active_friendships(self))
+  end
+
+  def requesting_friends
+    User.where(id: Friendship.requesting_friendships(self))
+  end
+
+  def requested_friends
+    User.where(id: Friendship.requested_friendships(self))
+  end
+
+  def friend_status(userb)
+    Friendship.friend_status(self, userb)
+  end
+
   private
 
   def ensure_session_token
