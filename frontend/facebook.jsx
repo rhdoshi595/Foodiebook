@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { editPost } from './actions/post_actions';
-
-window.editPost = editPost;
-
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
